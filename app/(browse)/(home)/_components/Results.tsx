@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { getStreams } from '@/lib/services/feed-service';
 import { ResultCard, ResultCardSkeleton } from './ResultCard';
 import { Skeleton } from '@/components/ui/Skeleton';
