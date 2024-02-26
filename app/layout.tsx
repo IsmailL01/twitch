@@ -31,6 +31,7 @@ export default async function RootLayout({
             <Toaster theme='light' position='bottom-center' />
             {children}
           </ThemeProvider>
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>
