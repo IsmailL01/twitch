@@ -1,6 +1,8 @@
+'use server';
+
 import { Webhook } from 'svix';
 import { headers } from 'next/headers';
-import { WebhookEvent, currentUser } from '@clerk/nextjs/server';
+import { WebhookEvent } from '@clerk/nextjs/server';
 import { db } from '@/src/lib/db';
 import { ErrorText } from '@/src/lib/UIText/error';
 import { resetIngresses } from '@/src/actions/ingress';
