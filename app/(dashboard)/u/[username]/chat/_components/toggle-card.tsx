@@ -19,11 +19,11 @@ const ToggleCard = (props: ToggleCardProps) => {
   const [isPending, startTransition] = useTransition();
 
   const onChange = () => {
-    startTransition(() => {
-      updateStream({ [field]: !value })
-        .then(() => toast.success('Chat settings updated'))
-        .catch(() => toast.error('Something went wrong'));
-    });
+    // startTransition(() => {
+    //   updateStream({ [field]: !value })
+    //     .then(() => toast.success('Chat settings updated'))
+    //     .catch(() => toast.error('Something went wrong'));
+    // });
   };
 
   return (
