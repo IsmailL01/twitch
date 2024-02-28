@@ -48,27 +48,28 @@ export const InfoModal = (props: InfoModalProps) => {
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    // e.preventDefault();
-    // startTransition(() => {
-    //   updateStream({ name })
-    //     .then(() => {
-    //       toast.success('Stream updated');
-    //       closeRef.current?.click();
-    //     })
-    //     .catch(() => toast.error('Something went wrong'));
-    // });
+    e.preventDefault();
+
+    startTransition(() => {
+      updateStream({ name })
+        .then(() => {
+          toast.success('Stream updated');
+          closeRef.current?.click();
+        })
+        .catch(() => toast.error('Something went wrong'));
+    });
   };
 
   const onRemoveThumbnail = () => {
-    // startTransition(() => {
-    //   updateStream({ thumbnailUrl: null })
-    //     .then(() => {
-    //       toast.success('Thumbnail removed');
-    //       setThumbnailUrl(null);
-    //       closeRef.current?.click();
-    //     })
-    //     .catch(() => toast.error('Something went wrong'));
-    // });
+    startTransition(() => {
+      updateStream({ thumbnailUrl: null })
+        .then(() => {
+          toast.success('Thumbnail removed');
+          setThumbnailUrl(null);
+          closeRef.current?.click();
+        })
+        .catch(() => toast.error('Something went wrong'));
+    });
   };
 
   return (
