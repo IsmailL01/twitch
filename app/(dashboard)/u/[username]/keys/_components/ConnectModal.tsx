@@ -32,7 +32,7 @@ type IngressType = typeof RTMP | typeof WHIP;
 export const ConnectModal = () => {
   const closeRef = useRef<ElementRef<'button'>>(null);
   const [isPending, startTransition] = useTransition();
-  const [ingressType, setIngressType] = useState<IngressType>(RTMP);
+  const [ingressType, setIngressType] = useState<IngressType>(RTMP); 
 
   const onSubmit = () => {
     startTransition(() => {
@@ -41,7 +41,7 @@ export const ConnectModal = () => {
           toast.success('Ingress created');
           closeRef?.current?.click();
         })
-        .catch(() => toast.error('Something went wrong'));
+        .catch((e) => toast.error(e.message));
     });
   };
 
